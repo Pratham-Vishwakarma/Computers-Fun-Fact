@@ -11,7 +11,7 @@ Welcome to the **Computers Fun Fact Generator**! This web application generates 
 
 ## Screenshots
 
-![App Screenshot](assets/screenshot.png)
+![App Screenshot](image.png)
 
 *Above: A screenshot of the Computers Fun Fact Generator in action.*
 
