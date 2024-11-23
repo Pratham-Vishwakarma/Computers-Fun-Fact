@@ -1,0 +1,61 @@
+body {
+    background-color: #000000;
+    color: #00FF00;
+    font-family: 'Press Start 2P', cursive; /* Changed to a more retro 'video game' font */
+    text-shadow: 0 0 5px #00FF00; /* Adds a glowing effect to text */
+    text-align: center;
+}
+
+h1, h2, h3 {
+    color: #00FF00;
+    text-shadow: 0 0 5px #00FF00; /* Consistent glowing effect */
+}
+
+button {
+    background-color: #333333;
+    color: #00FF00;
+    border: 2px solid #00FF00;
+    padding: 10px;
+    font-family: 'Press Start 2P', cursive;
+    cursor: pointer;
+    box-shadow: 0 0 10px #00FF00; /* Adds a glow around buttons */
+    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+}
+
+button:hover {
+    background-color: #444444;
+    transform: scale(1.05); /* Slightly enlarges button on hover */
+}
+
+.container {
+    border: 2px solid #333333;
+    padding: 20px;
+    margin: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    box-shadow: 0 0 15px #00FF00; /* Glowing border effect */
+    border-radius: 10px; /* Rounded corners for a softer look */
+    height: 100vh; /* Optional: Makes the container take full viewport height */
+}
+
+
+.fun-fact-title {
+    font-weight: bold;
+    display: block; /* Makes the title go on a new line */
+}
+
+::selection {
+    background-color: #00FF00; /* Highlight text selection */
+    color: #000000;
+}
+
+a {
+    color: #00FF00;
+    text-decoration: none;
+    border-bottom: 1px dashed #00FF00; /* Underline with a dashed line */
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+a:hover {
+    color: #FFFFFF;
+    border-bottom-color: #FFFFFF; /* Changes color on hover */
+}
