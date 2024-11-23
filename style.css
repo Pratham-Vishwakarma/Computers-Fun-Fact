@@ -1,62 +1,109 @@
+/* Body and background */
 body {
-    background-color: #000000;
+    background: radial-gradient(circle at 50%, #000000, #333333);
     color: #00FF00;
-    font-family: 'Press Start 2P', cursive; /* Changed to a more retro 'video game' font */
-    text-shadow: 0 0 5px #00FF00; /* Adds a glowing effect to text */
+    font-family: 'Press Start 2P', cursive; /* Retro video game font */
+    text-shadow: 0 0 10px #00FF00; /* Glowing text effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+    transition: background 1s ease;
+}
+
+/* Container for content */
+.container {
+    border: 2px solid #00FF00;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
+    box-shadow: 0 0 25px #00FF00; /* Glowing border */
+    border-radius: 15px;
     text-align: center;
+    width: 80%; /* Ensure the container isn't too wide */
+    max-width: 600px; /* Maximum width */
+    transition: transform 0.3s ease;
 }
 
-h1, h2, h3 {
+/* Title styling */
+h1 {
     color: #00FF00;
-    text-shadow: 0 0 5px #00FF00; /* Consistent glowing effect */
+    text-shadow: 0 0 15px #00FF00, 0 0 30px #00FF00; /* More intense glow */
+    font-size: 2.5em;
+    margin-bottom: 20px;
 }
 
+/* Button Styling */
 button {
     background-color: #333333;
     color: #00FF00;
     border: 2px solid #00FF00;
-    padding: 10px;
+    padding: 15px;
+    font-size: 1.2em;
     font-family: 'Press Start 2P', cursive;
     cursor: pointer;
-    box-shadow: 0 0 10px #00FF00; /* Adds a glow around buttons */
-    transition: background-color 0.3s, transform 0.3s; /* Smooth transitions */
+    box-shadow: 0 0 15px #00FF00;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 5px;
 }
 
 button:hover {
     background-color: #444444;
-    transform: scale(1.05); /* Slightly enlarges button on hover */
+    transform: scale(1.1);
+    box-shadow: 0 0 25px #00FF00;
 }
 
-.container {
-    border: 2px solid #333333;
-    padding: 20px;
-    margin: 20px;
-    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent background */
-    box-shadow: 0 0 15px #00FF00; /* Glowing border effect */
-    border-radius: 10px; /* Rounded corners for a softer look */
-    height: 100vh; /* Optional: Makes the container take full viewport height */
+/* Fact display */
+.fun-fact-display {
+    font-size: 1.1em;
+    margin-top: 20px;
+    color: #00FF00;
+    opacity: 0;
+    animation: fadeIn 1s forwards; /* Fade-in effect for facts */
 }
 
-
-.fun-fact-title {
-    font-weight: bold;
-    font-size: 1.2em; /* Optional: increase font size for emphasis */
+/* Keyframes for fade-in effect */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
-
+/* Glow effect on selection */
 ::selection {
-    background-color: #00FF00; /* Highlight text selection */
+    background-color: #00FF00;
     color: #000000;
 }
 
+/* Add animations to links */
 a {
     color: #00FF00;
     text-decoration: none;
-    border-bottom: 1px dashed #00FF00; /* Underline with a dashed line */
-    transition: color 0.3s, border-bottom-color 0.3s;
+    border-bottom: 1px dashed #00FF00;
+    transition: color 0.3s ease, border-bottom-color 0.3s ease;
 }
 
 a:hover {
     color: #FFFFFF;
-    border-bottom-color: #FFFFFF; /* Changes color on hover */
+    border-bottom-color: #FFFFFF;
+}
+
+/* Floating background animation */
+@keyframes backgroundAnimation {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+
+body {
+    background: linear-gradient(45deg, #000000, #333333);
+    background-size: 400% 400%;
+    animation: backgroundAnimation 5s ease infinite;
 }
