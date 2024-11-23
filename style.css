@@ -40,8 +40,9 @@ button:hover {
 
 .fun-fact-title {
     font-weight: bold;
-    display: block; /* Makes the title go on a new line */
+    font-size: 1.2em; /* Optional: increase font size for emphasis */
 }
+
 
 ::selection {
     background-color: #00FF00; /* Highlight text selection */
