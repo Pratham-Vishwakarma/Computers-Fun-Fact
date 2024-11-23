@@ -86,14 +86,14 @@ const funFacts = [
 function generateRandomFunFact() {
     const randomIndex = Math.floor(Math.random() * funFacts.length);
     const funFact = funFacts[randomIndex];
-    return `<span class="fun-fact-title">${funFact.title}</span><br>${funFact.description}`;
+    return `<span class="fun-fact-title">${funFact.title}</span><br><span class="fun-fact-description">${funFact.description}</span>`;
 }
 
 // Event listener for button click
-document.getElementById('generateFactButton').addEventListener('click', function() {
+document.getElementById('generateFactButton').addEventListener('click', function () {
     const funFactDisplay = document.getElementById('funFactDisplay');
     funFactDisplay.innerHTML = generateRandomFunFact();
-    // Apply fade-in effect again
+    // Smooth opacity change for display
     funFactDisplay.style.opacity = 0;
     setTimeout(() => { funFactDisplay.style.opacity = 1; }, 100);
 });
