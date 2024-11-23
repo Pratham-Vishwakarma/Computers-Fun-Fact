@@ -1,4 +1,4 @@
-// JSON data
+// JSON data for fun facts
 const funFacts = [
     {
         "title": "ENIAC's Size",
@@ -84,13 +84,16 @@ const funFacts = [
 
 // Function to generate a random fun fact
 function generateRandomFunFact() {
-const randomIndex = Math.floor(Math.random() * funFacts.length);
-const funFact = funFacts[randomIndex];
-return `<span class="fun-fact-title">${funFact.title}</span><br>${funFact.description}`;
+    const randomIndex = Math.floor(Math.random() * funFacts.length);
+    const funFact = funFacts[randomIndex];
+    return `<span class="fun-fact-title">${funFact.title}</span><br>${funFact.description}`;
 }
 
 // Event listener for button click
 document.getElementById('generateFactButton').addEventListener('click', function() {
-const funFactDisplay = document.getElementById('funFactDisplay');
-funFactDisplay.innerHTML = generateRandomFunFact(); // Changed to innerHTML to parse HTML tags
+    const funFactDisplay = document.getElementById('funFactDisplay');
+    funFactDisplay.innerHTML = generateRandomFunFact();
+    // Apply fade-in effect again
+    funFactDisplay.style.opacity = 0;
+    setTimeout(() => { funFactDisplay.style.opacity = 1; }, 100);
 });
